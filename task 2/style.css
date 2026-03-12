@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282c34; /* Dark background */
+    color: #fff;
+    margin: 0;
+}
+
+.stopwatch-container {
+    background-color: #3a4049;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 350px;
+    max-width: 90%;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #61dafb; /* Light blue accent */
+}
+
+.time-display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.controls button {
+    background-color: #61dafb;
+    color: #282c34;
+    border: none;
+    padding: 12px 25px;
+    margin: 0 8px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.controls button:hover:not(:disabled) {
+    background-color: #21a1f1;
+    transform: translateY(-2px);
+}
+
+.controls button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.laps-display {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    max-height: 200px;
+    overflow-y: auto; /* Enable scrolling for many laps */
+    border-top: 1px solid #555;
+    padding-top: 15px;
+}
+
+.laps-display li {
+    background-color: #4a5059;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-family: monospace; /* Monospace font for time display */
+}
+
+/* Scrollbar Styling (Optional, for better look) */
+.laps-display::-webkit-scrollbar {
+    width: 8px;
+}
+
+.laps-display::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 10px;
+}
+
+.laps-display::-webkit-scrollbar-thumb {
+    background: #61dafb;
+    border-radius: 10px;
+}
